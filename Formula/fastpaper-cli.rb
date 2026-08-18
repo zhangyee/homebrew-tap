@@ -1,25 +1,25 @@
 class FastpaperCli < Formula
   desc "CLI tool for searching, downloading and reading academic papers"
   homepage "https://github.com/zhangyee/fastpaper-cli"
-  version "0.3.3"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.3.3/fastpaper-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "675620cc857e8368fa0e706f79a2e1d35198aff8ea4983217acbcb37e4c1595c"
+      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.4.0/fastpaper-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "a8a6c7427bd07f37553d38e9da398cd5b75404264131b4886f060e9fd7c6483b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.3.3/fastpaper-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "6dff6d0b02e247687dd401f894ca931cca5ba2ff664d0d3c1ea9ed05b5054450"
+      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.4.0/fastpaper-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "3dbf7bac1ab460eb65f83151c9dc33df3e0e97b02df05a9ddf892bccbed294cd"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.3.3/fastpaper-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ed6fbdeb0d1b42b11fa85424b6a82980ac92577e5a0fd4bfebd8a2ffb4e60334"
+      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.4.0/fastpaper-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "868a4d7742281cbafb00220d179debc473e14346e5d5c822ae91b9fe2a112c7c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.3.3/fastpaper-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "38c951321d8c702535cf483c2a713efe152fa6b34f2bbebb5ff3d72b2f5032e5"
+      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.4.0/fastpaper-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4ca1b9042017cb22c1fc006a74f8acff46d43724b3bd74bb4c10a75f9c165c5b"
     end
   end
   license "GPL-3.0"
@@ -48,10 +48,18 @@ class FastpaperCli < Formula
   end
 
   def install
-    bin.install "fastpaper" if OS.mac? && Hardware::CPU.arm?
-    bin.install "fastpaper" if OS.mac? && Hardware::CPU.intel?
-    bin.install "fastpaper" if OS.linux? && Hardware::CPU.arm?
-    bin.install "fastpaper" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "fastpaper"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "fastpaper"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "fastpaper"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "fastpaper"
+    end
 
     install_binary_aliases!
 
