@@ -1,25 +1,25 @@
 class FastpaperCli < Formula
   desc "CLI tool for searching, downloading and reading academic papers"
   homepage "https://github.com/zhangyee/fastpaper-cli"
-  version "0.5.1"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.5.1/fastpaper-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "b76e279bf1c9fc7d938fe1ec292adcc5eb4e2b7219d54810270faae829b383bd"
+      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.6.0/fastpaper-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "cdcb81123e6f097d9ce3f114a1d146c71a1479a46d3c5c19693ada9d03f95394"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.5.1/fastpaper-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "81b9dd874e5cf0fe70ea5daf4f445443a147a82515ba4d79f5c9a93b4b2e4cc4"
+      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.6.0/fastpaper-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "413b5e334a0f54adca4ce9c0ae9e340f5f4c59be8c71aed8d4bde3a48147051c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.5.1/fastpaper-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6b5f5f18014566211429ad08ae2785b02a0e28ef079adb32d99917c4cb77953d"
+      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.6.0/fastpaper-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ddf5dac4f647e521da6ec89039cc3c0284e171eb63758465a78307207832951a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.5.1/fastpaper-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "110806f3bef9f56de0cd9b04a555c7052626e46d861863eb24a7207967ec766e"
+      url "https://github.com/zhangyee/fastpaper-cli/releases/download/v0.6.0/fastpaper-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7d99b324da058afe294f6e5e37f378333ccbe0a90aa8b0fcb19ba7de62e799b1"
     end
   end
   license "GPL-3.0"
